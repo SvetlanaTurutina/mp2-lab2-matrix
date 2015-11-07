@@ -280,4 +280,3 @@ TEST(TVector, cant_multiply_vectors_with_not_equal_size)
 	ASSERT_ANY_THROW(v * v1);
   //ADD_FAILURE();
 }
-

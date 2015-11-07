@@ -203,12 +203,15 @@ TEST(TMatrix, can_multiply_matrices_with_equal_size)
 	TMatrix<int> m(2), m1(2), res(2);
 	m[0][0] = 1;
 	m[0][1] = 2;
+	m[1][1] = 3;
 
 	m1[0][0] = 3;
 	m1[0][1] = 4;
+	m1[1][1] = 5;
 
 	res[0][0] = 3;
-	res[0][1] = 4;
+	res[0][1] = 14;
+	res[1][1] = 15;
 
 	EXPECT_EQ(res, m * m1);
 	//ADD_FAILURE();
@@ -220,4 +223,5 @@ TEST(TMatrix, cant_multiply_matrixes_with_not_equal_size)
 	ASSERT_ANY_THROW(m * m1);
 	//ADD_FAILURE();
 }
+
 
